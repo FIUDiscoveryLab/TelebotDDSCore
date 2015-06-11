@@ -8,7 +8,7 @@ Contains DDS generated files, scripts and IDL files
 -If you are using Java, nddsjava.jar must be built to path
 
 ## Installation
-A
+
 Add TelebotDDSCore as a submodule to your project
 `git submodule add https://github.com/FIUDiscoveryLab/TelebotDDSCore.git src/`
 
