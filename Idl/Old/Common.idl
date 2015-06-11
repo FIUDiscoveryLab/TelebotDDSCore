@@ -1,0 +1,18 @@
+module aeondds 
+{
+  module common
+  {
+	enum ESignalType 
+	{
+	  NONE,
+	  INITIALIZATION,
+	  SHUTDOWN,
+	  RESET
+	};
+
+	struct TSignal
+	{
+	  ESignalType signalType;
+	};
+  };
+};

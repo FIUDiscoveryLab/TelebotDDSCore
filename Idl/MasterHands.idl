@@ -1,0 +1,32 @@
+// Data Definition for Communication between Master and Slave
+
+module master
+{
+	module hands 
+	{
+		// Topics
+		const string TOPIC_MASTER_TO_SLAVE_HANDS = "MasterToSlaveHandsCommands";
+		const string TOPIC_SLAVE_TO_MASTER_HANDS = "SlaveToMasterHandsMessages";
+		
+		const long MAX_OCTETS_JSON_FILE = 10485760;		// 10MB
+		
+		struct TMasterToHands
+		{
+			// Left Hand
+			double lPinky;
+			double lRing; 
+			double lMiddle; 
+			double lIndex;
+			double lThumbFlexion; 
+			double lThumbOpposition;
+			
+			// Right Hand
+			double rThumbFlexion; 
+			double rThumbOpposition;
+			double rIndex;
+			double rMiddle;
+			double rRing;
+			double rPinky;
+		};
+	};
+};

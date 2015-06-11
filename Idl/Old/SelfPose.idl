@@ -1,0 +1,28 @@
+ 
+module aeondds 
+{	
+	module selfpose 
+	{
+		// Topic names
+		const string TOPIC_VEHICLE_SELF_POSE	= "vehicleSelfPose";
+		
+		struct TSelfPose
+		{
+			long vehicleId; //@key
+			long timestampMs;
+		
+			double x;
+			double y;
+			double z;
+			
+			double phi_rad;
+			double theta_rad;
+			double psi_rad;
+			
+			double q1;
+			double q2;
+			double q3;
+			double q4;
+		};
+	};
+};

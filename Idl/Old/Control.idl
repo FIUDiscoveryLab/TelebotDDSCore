@@ -1,0 +1,199 @@
+module aeondds 
+{
+  module control
+  {
+    // Topic names
+    const string TOPIC_PATHPLAN_REQUESTED 		= "PathPlanningRequested";
+    const string TOPIC_PATHPLAN_CURRENT 		= "PathPlanningCurrent";	
+    
+    const string TOPIC_WAYPOINTCOURSE_REQUESTED 	= "WaypointCourseRequested";	
+    const string TOPIC_WAYPOINTCOURSE_CURRENT 		= "WaypointCourseCurrent";	
+    
+    const string TOPIC_PIDTARGETWAYPOINT_REQUESTED 	= "PIDTargetWaypointRequested";	
+    const string TOPIC_PIDTARGETWAYPOINT_CURRENT 	= "PIDTargetWaypointCurrent";	
+    
+    const string TOPIC_ATTITUDE_COMMAND 		= "AttitudeCommand";	
+    
+    const string TOPIC_VEHICLECOMMAND_REQUESTED 	= "VehicleCommandRequested";
+    const string TOPIC_VEHICLECOMMAND_CURRENT 		= "VehicleCommandCurrent";
+    
+    const string TOPIC_VEHICLE_STATE 			= "VehicleState";	
+    
+    // Sub-structure
+    struct TARState
+    {
+      boolean isFlying;
+      boolean isBatteryLow;
+      boolean isInEmergency;
+      boolean isControlWatchdogTriggered;
+    };
+
+    // Singleton
+    struct TVehicleState
+    {
+      long batteryPercentage;
+      
+      float theta;
+      float phi;
+      float psi;
+      
+      long altitude;
+      
+      float vx;
+      float vy;
+      float vz;
+      
+      TARState arState;
+    };
+    
+    enum EWaypointStatus
+    {
+      WAYPOINT_REQUESTED,
+      WAYPOINT_CANCELLED,
+      WAYPOINT_DENIED,
+      WAYPOINT_TRACKING,
+      WAYPOINT_ARRIVED
+    };
+      
+    struct TWaypoint
+    {
+      float x;
+      float y;
+      float z;
+      float yaw;
+      
+      EWaypointStatus status;
+    };
+   
+    enum EPathPlanningStatus
+    {
+      PATHPLANNING_REQUESTED,
+      PATHPLANNING_CANCELLED,
+      PATHPLANNING_DENIED,
+      PATHPLANNING_PROCESSING,
+      PATHPLANNING_COMPLETE,
+      PATHPLANNING_FAILED
+    };
+   
+    // Singleton
+    struct TPathPlanningRequest
+    {
+      EPathPlanningStatus status;
+      TWaypoint goalPoint;
+      long errorId;
+    };
+    
+    enum EWaypointCourseStatus
+    {
+      WAYPOINTCOURSE_REQUESTED,
+      WAYPOINTCOURSE_CANCELLED,
+      WAYPOINTCOURSE_DENIED,
+      WAYPOINTCOURSE_NAVIGATING,
+      WAYPOINTCOURSE_COMPLETE
+    };
+    
+    const long MAX_WAYPOINTS = 1000;
+    
+    // Singleton
+    struct TWaypointCourse
+    {
+      EWaypointCourseStatus status;
+      sequence<TWaypoint, MAX_WAYPOINTS> waypoints;
+      long currentWaypoint;
+    };
+    
+    enum EVehicleCommandStatus
+    {
+      VEHICLECOMMAND_REQUESTED,
+      VEHICLECOMMAND_CANCELLED,
+      VEHICLECOMMAND_DENIED,
+      VEHICLECOMMAND_PROCESSING,
+      VEHICLECOMMAND_COMPLETE, 
+      VEHICLECOMMAND_FAILED
+    };
+    
+    enum EVehicleCommandType
+    {
+      VEHICLECOMMANDTYPE_TAKEOFF,
+      VEHICLECOMMANDTYPE_LAND,
+      VEHICLECOMMANDTYPE_EMERGENCY,
+      VEHICLECOMMANDTYPE_ANIMATION
+    };
+    
+    struct TVehicleCommand
+    {   
+      EVehicleCommandStatus status;
+      EVehicleCommandType type;
+      long parameter;
+      long errorId;
+    };
+    
+    struct TAttitudeCommand
+    {   
+      // -1.0 to 1.0
+      float roll;
+      float pitch;
+      float dAltitude;
+      float dYaw;
+    }; 
+    
+    /////////////////////////////////
+    // DEPRECATED - DO NOT USE
+    
+    // Topic names
+    const string TOPIC_CONTROL_SOLICITATION_REQREP	= "ControlSolicitations";
+    const string TOPIC_CONTROL_SWITCH_REQREP		= "ControlSwitches";
+    const string TOPIC_CONTROL_SIGNAL			= "ControlSignals";
+    
+    
+    // Enums
+    enum EControlSolicitationResponse 
+    {
+	    REJECTED,
+	    ACCEPTED
+    };
+    
+    enum EControlSwitchResponse 
+    {
+	    FAILURE,
+	    SUCCESS
+    };
+
+    enum EControlSignal 
+    {
+	    STOP,
+	    START,
+	    ABORT
+    };
+    
+    struct TControlSolicitationRequest
+    {
+	    long systemId; 		//@key
+    };
+
+    struct TControlSolicitationResponse
+    {
+	    long systemId; 		//@key
+
+	    EControlSolicitationResponse response;
+    };
+
+    struct TControlSwitchRequest
+    {
+	    long systemId; 		//@key
+    };
+
+    struct TControlSwitchResponse
+    {
+	    long systemId; 		//@key
+	    EControlSwitchResponse response;
+    };
+
+    struct TControlSignal
+    {
+	    long systemId; 		//@key
+
+	    EControlSignal signal;
+    };
+  };
+};

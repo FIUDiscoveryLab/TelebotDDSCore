@@ -1,0 +1,160 @@
+module aeondds 
+{
+  module test
+  {
+	// String lengths include one null terminator
+	const short OBJECT_ID_LENGTH = 16;
+	
+	const string TOPIC_TAG_POSE_TRACK			= "TagPoseTrack";
+	const string TOPIC_VICON_OBJECT_TRACK			= "ViconObjectTrack";
+	const string TOPIC_VEHICLE_COMMAND			= "VehicleCommand";
+	const string TOPIC_VEHICLE_STATUS			= "VehicleStatus";
+	const string TOPIC_VICON_TRACK_EULER			= "ViconTrackEuler";
+	const string TOPIC_VICON_TRACK_QUATERNION		= "ViconTrackQuaternion";
+	
+	// Enums
+	enum EObjectType 
+	{
+		VEHICLE,
+		OBSTACLE
+	};
+	
+	enum EVehicleCommandType
+	{
+		TAKEOFF,
+		LAND,
+		HOVER,
+		RETURN,
+		GOTOWAYPOINT,
+		GOTOTAG,
+		ENABLEPID,
+		DISABLEPID,
+		ENABLEFILTER,
+		DISABLEFILTER,
+		ENABLEWANDMODE,
+		DISABLEWANDMODE,
+		PASSTHROUGH
+	};
+	
+	enum EVehicleState
+	{
+		DISCONNECTED,
+		LANDED,
+		FLYING,
+		EMERGENCY
+	};
+
+	enum EMissionState
+	{
+		IDLE,
+		ACTIVE,
+		COMPLETE
+	};
+	
+	struct TTagPose
+	{
+		long objectId; 	//@key
+
+		double x_m;
+		double y_m;
+		double z_m;
+		double phi_rad;		// Roll
+		double theta_rad;	// Pitch
+		double psi_rad;		// Yaw
+	};
+
+	// Types
+	struct TObjectTrack 
+	{
+		string<OBJECT_ID_LENGTH>	objectId; 	//@key
+		EObjectType 			objectType; 	//@key
+
+		double x_m;
+		double y_m;
+		double z_m;
+		double phi_rad;		// Roll
+		double theta_rad;	// Pitch
+		double psi_rad;		// Yaw
+	};
+	
+	struct TViconTrackEuler
+	{
+		string<OBJECT_ID_LENGTH>	objectId; 	//@key
+		EObjectType 			objectType;
+		unsigned long long		timestampMs;			
+
+		double x_m;
+		double y_m;
+		double z_m;
+		
+		double phi_rad;		// Roll
+		double theta_rad;	// Pitch
+		double psi_rad;		// Yaw
+	};
+	
+	struct TViconTrackQuaternion
+	{
+		string<OBJECT_ID_LENGTH>	objectId; 	//@key
+		EObjectType 			objectType;
+		unsigned long long		timestampMs;
+		
+		double x_m;
+		double y_m;
+		double z_m;
+		
+		double q0;
+		double q1;
+		double q2;
+		double q3;
+	};
+
+	struct TVehicleCommand
+	{
+		long systemId; 		//@key
+		
+		EVehicleCommandType commandType;
+		double p1;
+		double p2;
+		double p3;
+		double p4;
+		long p5;
+	};
+
+	struct TVehicleStatus
+	{
+		long vehicleId; 			//@key
+		string<OBJECT_ID_LENGTH> vehicleName; 	//@key 
+
+		double longitude;
+		double latitude;
+		double altitude;
+		double roll;
+		double pitch;
+		double yaw;
+		double batteryLevel;
+		double goalLat;
+		double goalLong;
+		double goalAltitude;
+		double goalYaw;
+	};
+	
+	struct TPose
+	{
+		double x_m;
+		double y_m;
+		double z_m;
+		double phi_rad;
+		double theta_rad;
+		double psi_rad;
+	};
+	
+	const long MAX_POSES = 1000;
+	
+	struct TPath
+	{
+		long vehicleId; 			//@key
+		 
+		sequence<TPose, MAX_POSES> waypoints;
+	};
+  };
+};

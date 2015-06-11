@@ -1,0 +1,16 @@
+module master
+{
+	module mobility
+	{
+	
+		// Topics
+		const string TOPIC_MASTER_TO_SLAVE_MOBILITY = "MasterToSlaveMobilityCommands";
+		const string TOPIC_SLAVE_TO_MASTER_MOBILITY = "SlaveToMasterMobilityMessages";
+		
+		struct TMasterToHandMobility
+		{
+			double lMotor;
+			double rMotor;
+		};
+	};
+};
