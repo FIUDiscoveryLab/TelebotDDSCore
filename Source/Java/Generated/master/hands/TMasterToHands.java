@@ -21,18 +21,18 @@ import com.rti.dds.cdr.CdrHelper;
 public class TMasterToHands implements Copyable, Serializable
 {
 
-    public double lPinky = 0;
-    public double lRing = 0;
-    public double lMiddle = 0;
-    public double lIndex = 0;
-    public double lThumbFlexion = 0;
-    public double lThumbOpposition = 0;
-    public double rThumbFlexion = 0;
-    public double rThumbOpposition = 0;
-    public double rIndex = 0;
-    public double rMiddle = 0;
-    public double rRing = 0;
-    public double rPinky = 0;
+    public int lPinky = 0;
+    public int lRing = 0;
+    public int lMiddle = 0;
+    public int lIndex = 0;
+    public int lThumbFlexion = 0;
+    public int lThumbOpposition = 0;
+    public int rThumbFlexion = 0;
+    public int rThumbOpposition = 0;
+    public int rIndex = 0;
+    public int rMiddle = 0;
+    public int rRing = 0;
+    public int rPinky = 0;
 
 
     public TMasterToHands() {

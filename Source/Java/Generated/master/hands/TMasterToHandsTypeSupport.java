@@ -162,29 +162,29 @@ public class TMasterToHandsTypeSupport extends TypeSupportImpl {
 
  
 
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
         if (include_encapsulation) {
             currentAlignment += encapsulation_size;
@@ -214,29 +214,29 @@ public class TMasterToHandsTypeSupport extends TypeSupportImpl {
         }
         
         
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment +=  CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment +=  CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
         if (include_encapsulation) {
             currentAlignment += encapsulation_size;
@@ -271,29 +271,29 @@ public class TMasterToHandsTypeSupport extends TypeSupportImpl {
         }
         
 
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
-        currentAlignment += CdrPrimitiveType.DOUBLE.getMaxSizeSerialized(currentAlignment);
+        currentAlignment += CdrPrimitiveType.INT.getMaxSizeSerialized(currentAlignment);
             
         if (include_encapsulation) {
             currentAlignment += encapsulation_size;
@@ -359,29 +359,29 @@ public class TMasterToHandsTypeSupport extends TypeSupportImpl {
         if(serialize_sample) {
 TMasterToHands typedSrc = (TMasterToHands) src;    
 
-        dst.writeDouble(typedSrc.lPinky);        
+        dst.writeInt(typedSrc.lPinky);        
             
-        dst.writeDouble(typedSrc.lRing);        
+        dst.writeInt(typedSrc.lRing);        
             
-        dst.writeDouble(typedSrc.lMiddle);        
+        dst.writeInt(typedSrc.lMiddle);        
             
-        dst.writeDouble(typedSrc.lIndex);        
+        dst.writeInt(typedSrc.lIndex);        
             
-        dst.writeDouble(typedSrc.lThumbFlexion);        
+        dst.writeInt(typedSrc.lThumbFlexion);        
             
-        dst.writeDouble(typedSrc.lThumbOpposition);        
+        dst.writeInt(typedSrc.lThumbOpposition);        
             
-        dst.writeDouble(typedSrc.rThumbFlexion);        
+        dst.writeInt(typedSrc.rThumbFlexion);        
             
-        dst.writeDouble(typedSrc.rThumbOpposition);        
+        dst.writeInt(typedSrc.rThumbOpposition);        
             
-        dst.writeDouble(typedSrc.rIndex);        
+        dst.writeInt(typedSrc.rIndex);        
             
-        dst.writeDouble(typedSrc.rMiddle);        
+        dst.writeInt(typedSrc.rMiddle);        
             
-        dst.writeDouble(typedSrc.rRing);        
+        dst.writeInt(typedSrc.rRing);        
             
-        dst.writeDouble(typedSrc.rPinky);        
+        dst.writeInt(typedSrc.rPinky);        
             
         }
 
@@ -452,29 +452,29 @@ TMasterToHands typedDst = (TMasterToHands) dst;
             typedDst.clear();
     try {
 
-            typedDst.lPinky = src.readDouble();
+            typedDst.lPinky = src.readInt();
             
-            typedDst.lRing = src.readDouble();
+            typedDst.lRing = src.readInt();
             
-            typedDst.lMiddle = src.readDouble();
+            typedDst.lMiddle = src.readInt();
             
-            typedDst.lIndex = src.readDouble();
+            typedDst.lIndex = src.readInt();
             
-            typedDst.lThumbFlexion = src.readDouble();
+            typedDst.lThumbFlexion = src.readInt();
             
-            typedDst.lThumbOpposition = src.readDouble();
+            typedDst.lThumbOpposition = src.readInt();
             
-            typedDst.rThumbFlexion = src.readDouble();
+            typedDst.rThumbFlexion = src.readInt();
             
-            typedDst.rThumbOpposition = src.readDouble();
+            typedDst.rThumbOpposition = src.readInt();
             
-            typedDst.rIndex = src.readDouble();
+            typedDst.rIndex = src.readInt();
             
-            typedDst.rMiddle = src.readDouble();
+            typedDst.rMiddle = src.readInt();
             
-            typedDst.rRing = src.readDouble();
+            typedDst.rRing = src.readInt();
             
-            typedDst.rPinky = src.readDouble();
+            typedDst.rPinky = src.readInt();
             
     } catch (IllegalCdrStateException stateEx) {
         if (src.available() >= CdrEncapsulation.CDR_ENCAPSULATION_PARAMETER_ID_ALIGNMENT) {
@@ -554,29 +554,29 @@ TMasterToHands typedDst = (TMasterToHands) dst;
 
         if (skip_sample) {
 
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
-            src.skipDouble();
+            src.skipInt();
             
         }
 
