@@ -7,7 +7,7 @@ module master
 		const string TOPIC_MASTER_TO_SLAVE_MOBILITY = "MasterToSlaveMobilityCommands";
 		const string TOPIC_SLAVE_TO_MASTER_MOBILITY = "SlaveToMasterMobilityMessages";
 		
-		struct TMasterToHandMobility
+		struct TMasterToSlaveMobility
 		{
 			double lMotor;
 			double rMotor;

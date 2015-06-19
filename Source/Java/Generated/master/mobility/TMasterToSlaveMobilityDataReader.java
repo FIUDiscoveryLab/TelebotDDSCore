@@ -22,14 +22,14 @@ import com.rti.dds.topic.TypeSupportImpl;
 // ===========================================================================
 
 /**
- * A reader for the TMasterToHandMobility user type.
+ * A reader for the TMasterToSlaveMobility user type.
  */
-public class TMasterToHandMobilityDataReader extends DataReaderImpl {
+public class TMasterToSlaveMobilityDataReader extends DataReaderImpl {
     // -----------------------------------------------------------------------
     // Public Methods
     // -----------------------------------------------------------------------
 
-    public void read(TMasterToHandMobilitySeq received_data, SampleInfoSeq info_seq,
+    public void read(TMasterToSlaveMobilitySeq received_data, SampleInfoSeq info_seq,
              int max_samples,
              int sample_states, int view_states, int instance_states) {
         read_untyped(received_data, info_seq, max_samples, sample_states,
@@ -37,7 +37,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void take(TMasterToHandMobilitySeq received_data, SampleInfoSeq info_seq,
+    public void take(TMasterToSlaveMobilitySeq received_data, SampleInfoSeq info_seq,
              int max_samples,
              int sample_states, int view_states, int instance_states) {
         take_untyped(received_data, info_seq, max_samples, sample_states,
@@ -45,7 +45,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void read_w_condition(TMasterToHandMobilitySeq received_data, 
+    public void read_w_condition(TMasterToSlaveMobilitySeq received_data, 
                  SampleInfoSeq info_seq,
                  int max_samples,
                  ReadCondition condition) {
@@ -54,7 +54,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void take_w_condition(TMasterToHandMobilitySeq received_data, 
+    public void take_w_condition(TMasterToSlaveMobilitySeq received_data, 
                  SampleInfoSeq info_seq,
                  int max_samples,
                  ReadCondition condition) {
@@ -63,17 +63,17 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void read_next_sample(TMasterToHandMobility received_data, SampleInfo sample_info) {
+    public void read_next_sample(TMasterToSlaveMobility received_data, SampleInfo sample_info) {
         read_next_sample_untyped(received_data, sample_info);
     }
 
 
-    public void take_next_sample(TMasterToHandMobility received_data, SampleInfo sample_info) {
+    public void take_next_sample(TMasterToSlaveMobility received_data, SampleInfo sample_info) {
         take_next_sample_untyped(received_data, sample_info);
     }
 
 
-    public void read_instance(TMasterToHandMobilitySeq received_data, SampleInfoSeq info_seq,
+    public void read_instance(TMasterToSlaveMobilitySeq received_data, SampleInfoSeq info_seq,
             int max_samples, InstanceHandle_t a_handle, int sample_states,
             int view_states, int instance_states) {
 
@@ -82,7 +82,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void take_instance(TMasterToHandMobilitySeq received_data, SampleInfoSeq info_seq,
+    public void take_instance(TMasterToSlaveMobilitySeq received_data, SampleInfoSeq info_seq,
             int max_samples, InstanceHandle_t a_handle, int sample_states,
             int view_states, int instance_states) {
 
@@ -91,7 +91,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-      public void read_instance_w_condition(TMasterToHandMobilitySeq received_data,
+      public void read_instance_w_condition(TMasterToSlaveMobilitySeq received_data,
               SampleInfoSeq info_seq, int max_samples,
               InstanceHandle_t a_handle, ReadCondition condition) {
 
@@ -100,7 +100,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
       }
 
 
-      public void take_instance_w_condition(TMasterToHandMobilitySeq received_data,
+      public void take_instance_w_condition(TMasterToSlaveMobilitySeq received_data,
               SampleInfoSeq info_seq, int max_samples,
               InstanceHandle_t a_handle, ReadCondition condition) {
 
@@ -109,7 +109,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
       }
 
 
-    public void read_next_instance(TMasterToHandMobilitySeq received_data,
+    public void read_next_instance(TMasterToSlaveMobilitySeq received_data,
             SampleInfoSeq info_seq, int max_samples,
             InstanceHandle_t a_handle, int sample_states, int view_states,
             int instance_states) {
@@ -119,7 +119,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void take_next_instance(TMasterToHandMobilitySeq received_data,
+    public void take_next_instance(TMasterToSlaveMobilitySeq received_data,
             SampleInfoSeq info_seq, int max_samples,
             InstanceHandle_t a_handle, int sample_states, int view_states,
             int instance_states) {
@@ -129,7 +129,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void read_next_instance_w_condition(TMasterToHandMobilitySeq received_data,
+    public void read_next_instance_w_condition(TMasterToSlaveMobilitySeq received_data,
             SampleInfoSeq info_seq, int max_samples,
             InstanceHandle_t a_handle, ReadCondition condition) {
 
@@ -138,7 +138,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void take_next_instance_w_condition(TMasterToHandMobilitySeq received_data,
+    public void take_next_instance_w_condition(TMasterToSlaveMobilitySeq received_data,
             SampleInfoSeq info_seq, int max_samples,
             InstanceHandle_t a_handle, ReadCondition condition) {
 
@@ -147,17 +147,17 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
     }
 
 
-    public void return_loan(TMasterToHandMobilitySeq received_data, SampleInfoSeq info_seq) {
+    public void return_loan(TMasterToSlaveMobilitySeq received_data, SampleInfoSeq info_seq) {
         return_loan_untyped(received_data, info_seq);
     }
 
 
-    public void get_key_value(TMasterToHandMobility key_holder, InstanceHandle_t handle){
+    public void get_key_value(TMasterToSlaveMobility key_holder, InstanceHandle_t handle){
         get_key_value_untyped(key_holder, handle);
     }
 
 
-    public InstanceHandle_t lookup_instance(TMasterToHandMobility key_holder) {
+    public InstanceHandle_t lookup_instance(TMasterToSlaveMobility key_holder) {
         return lookup_instance_untyped(key_holder);
     }
 
@@ -167,7 +167,7 @@ public class TMasterToHandMobilityDataReader extends DataReaderImpl {
 
     // --- Constructors: -----------------------------------------------------
 
-    /*package*/ TMasterToHandMobilityDataReader(long native_reader, DataReaderListener listener,
+    /*package*/ TMasterToSlaveMobilityDataReader(long native_reader, DataReaderListener listener,
                               int mask, TypeSupportImpl data_type) {
         super(native_reader, listener, mask, data_type);
     }

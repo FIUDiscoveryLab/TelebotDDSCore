@@ -18,19 +18,19 @@ import java.io.Serializable;
 import com.rti.dds.cdr.CdrHelper;
 
 
-public class TMasterToHandMobility implements Copyable, Serializable
+public class TMasterToSlaveMobility implements Copyable, Serializable
 {
 
     public double lMotor = 0;
     public double rMotor = 0;
 
 
-    public TMasterToHandMobility() {
+    public TMasterToSlaveMobility() {
 
     }
 
 
-    public TMasterToHandMobility(TMasterToHandMobility other) {
+    public TMasterToSlaveMobility(TMasterToSlaveMobility other) {
 
         this();
         copy_from(other);
@@ -39,8 +39,8 @@ public class TMasterToHandMobility implements Copyable, Serializable
 
 
     public static Object create() {
-        TMasterToHandMobility self;
-        self = new TMasterToHandMobility();
+        TMasterToSlaveMobility self;
+        self = new TMasterToSlaveMobility();
          
         self.clear();
         
@@ -67,7 +67,7 @@ public class TMasterToHandMobility implements Copyable, Serializable
             return false;
         }
 
-        TMasterToHandMobility otherObj = (TMasterToHandMobility)o;
+        TMasterToSlaveMobility otherObj = (TMasterToSlaveMobility)o;
 
 
 
@@ -96,7 +96,7 @@ public class TMasterToHandMobility implements Copyable, Serializable
     /**
      * This is the implementation of the <code>Copyable</code> interface.
      * This method will perform a deep copy of <code>src</code>
-     * This method could be placed into <code>TMasterToHandMobilityTypeSupport</code>
+     * This method could be placed into <code>TMasterToSlaveMobilityTypeSupport</code>
      * rather than here by using the <code>-noCopyable</code> option
      * to rtiddsgen.
      * 
@@ -110,8 +110,8 @@ public class TMasterToHandMobility implements Copyable, Serializable
     public Object copy_from(Object src) {
         
 
-        TMasterToHandMobility typedSrc = (TMasterToHandMobility) src;
-        TMasterToHandMobility typedDst = this;
+        TMasterToSlaveMobility typedSrc = (TMasterToSlaveMobility) src;
+        TMasterToSlaveMobility typedDst = this;
 
         typedDst.lMotor = typedSrc.lMotor;
             

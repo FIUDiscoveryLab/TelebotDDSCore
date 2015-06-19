@@ -21,9 +21,9 @@ import com.rti.dds.util.LoanableSequence;
 
 
 /**
- * A sequence of TMasterToHandMobility instances.
+ * A sequence of TMasterToSlaveMobility instances.
  */
-public final class TMasterToHandMobilitySeq extends LoanableSequence implements Copyable {
+public final class TMasterToSlaveMobilitySeq extends LoanableSequence implements Copyable {
     // -----------------------------------------------------------------------
     // Package Fields
     // -----------------------------------------------------------------------
@@ -41,18 +41,18 @@ public final class TMasterToHandMobilitySeq extends LoanableSequence implements 
 
     // --- Constructors: -----------------------------------------------------
 
-    public TMasterToHandMobilitySeq() {
-        super(TMasterToHandMobility.class);
+    public TMasterToSlaveMobilitySeq() {
+        super(TMasterToSlaveMobility.class);
     }
 
 
-    public TMasterToHandMobilitySeq(int initialMaximum) {
-        super(TMasterToHandMobility.class, initialMaximum);
+    public TMasterToSlaveMobilitySeq(int initialMaximum) {
+        super(TMasterToSlaveMobility.class, initialMaximum);
     }
 
 
-    public TMasterToHandMobilitySeq(Collection elements) {
-        super(TMasterToHandMobility.class, elements);
+    public TMasterToSlaveMobilitySeq(Collection elements) {
+        super(TMasterToSlaveMobility.class, elements);
     }
     
 
@@ -99,19 +99,19 @@ public final class TMasterToHandMobilitySeq extends LoanableSequence implements 
             } else {
                 // check to see if our entry is null, if it is, a new instance has to be allocated
                 if (get(i) == null){ 
-                    set(i, TMasterToHandMobility.create());
+                    set(i, TMasterToSlaveMobility.create());
                 }
                 set(i, ((Copyable) get(i)).copy_from(typedSrc.get(i)));
             }
         }
         
-        // copy 'new' TMasterToHandMobility objects (beyond the original size of this object)
+        // copy 'new' TMasterToSlaveMobility objects (beyond the original size of this object)
         for(int i = origSize; i < srcSize; i++){
             if (typedSrc.get(i) == null) {
                 add(null);
             } else {
                 // NOTE: we need to create a new object here to hold the copy
-                add(TMasterToHandMobility.create());
+                add(TMasterToSlaveMobility.create());
                 // we need to do a set here since enums aren't truely Copyable
                 set(i, ((Copyable) get(i)).copy_from(typedSrc.get(i)));
             }

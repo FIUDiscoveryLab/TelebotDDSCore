@@ -43,14 +43,14 @@ import com.rti.dds.infrastructure.Copyable;
 
 /**
  * A collection of useful methods for dealing with objects of type
- * TMasterToHandMobility.
+ * TMasterToSlaveMobility.
  */
-public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
+public class TMasterToSlaveMobilityTypeSupport extends TypeSupportImpl {
     // -----------------------------------------------------------------------
     // Private Fields
     // -----------------------------------------------------------------------
 
-    private static final String TYPE_NAME = "master::mobility::TMasterToHandMobility";
+    private static final String TYPE_NAME = "master::mobility::TMasterToSlaveMobility";
 
     private static final char[] PLUGIN_VERSION = {2, 0, 0, 0};
 
@@ -59,8 +59,8 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
         1;
     
 
-    private static final TMasterToHandMobilityTypeSupport _singleton
-        = new TMasterToHandMobilityTypeSupport();
+    private static final TMasterToSlaveMobilityTypeSupport _singleton
+        = new TMasterToSlaveMobilityTypeSupport();
     
     // -----------------------------------------------------------------------
     // Public Methods
@@ -90,16 +90,16 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
      * They should be used directly or modified only by advanced users and are
      * subject to change in future versions of RTI Connext.
      */
-    public static TMasterToHandMobilityTypeSupport get_instance() {
+    public static TMasterToSlaveMobilityTypeSupport get_instance() {
         return _singleton;
     }
 
-    public static TMasterToHandMobilityTypeSupport getInstance() {
+    public static TMasterToSlaveMobilityTypeSupport getInstance() {
         return get_instance();
     }
 
     public Object create_data() {
-        return TMasterToHandMobility.create();
+        return TMasterToSlaveMobility.create();
     }
 
     public void destroy_data(Object data) {
@@ -107,7 +107,7 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
     }
 
     public Object create_key() {
-        return new TMasterToHandMobility();
+        return new TMasterToSlaveMobility();
     }
 
     public void destroy_key(Object key) {
@@ -115,7 +115,7 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
     }
 
     public Class get_type() {
-        return TMasterToHandMobility.class;
+        return TMasterToSlaveMobility.class;
     }
     
     /**
@@ -128,12 +128,12 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
      * @exception NullPointerException If <code>destination</code> or 
      * <code>source</code> is null.
      * @exception ClassCastException If either <code>destination</code> or
-     * <code>this</code> is not a <code>TMasterToHandMobility</code>
+     * <code>this</code> is not a <code>TMasterToSlaveMobility</code>
      * type.
      */
     public Object copy_data(Object destination, Object source) {
-        TMasterToHandMobility typedDst = (TMasterToHandMobility) destination;
-        TMasterToHandMobility typedSrc = (TMasterToHandMobility) source;
+        TMasterToSlaveMobility typedDst = (TMasterToSlaveMobility) destination;
+        TMasterToSlaveMobility typedSrc = (TMasterToSlaveMobility) source;
 
         return typedDst.copy_from(typedSrc);
     
@@ -214,7 +214,7 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
         long origAlignment = currentAlignment;
 
         long encapsulation_size = currentAlignment;
-        TMasterToHandMobility typedSrc = (TMasterToHandMobility) sample;
+        TMasterToSlaveMobility typedSrc = (TMasterToSlaveMobility) sample;
     
         if(include_encapsulation) {
             if (!CdrEncapsulation.isValidEncapsulationKind(encapsulation_id)) {
@@ -297,7 +297,7 @@ public class TMasterToHandMobilityTypeSupport extends TypeSupportImpl {
 
 
         if(serialize_sample) {
-TMasterToHandMobility typedSrc = (TMasterToHandMobility) src;    
+TMasterToSlaveMobility typedSrc = (TMasterToSlaveMobility) src;    
 
         dst.writeDouble(typedSrc.lMotor);        
             
@@ -334,7 +334,7 @@ TMasterToHandMobility typedSrc = (TMasterToHandMobility) src;
         }
 
         if (serialize_key) {
-TMasterToHandMobility typedSrc = (TMasterToHandMobility) src;    
+TMasterToSlaveMobility typedSrc = (TMasterToSlaveMobility) src;    
 
             serialize(endpoint_data, src, dst, false, CdrEncapsulation.CDR_ENCAPSULATION_ID_CDR_BE, true, endpoint_plugin_qos);
     
@@ -367,7 +367,7 @@ TMasterToHandMobility typedSrc = (TMasterToHandMobility) src;
         }
 
         if(deserialize_sample) {
-TMasterToHandMobility typedDst = (TMasterToHandMobility) dst;
+TMasterToSlaveMobility typedDst = (TMasterToSlaveMobility) dst;
         
             typedDst.clear();
     try {
@@ -418,7 +418,7 @@ TMasterToHandMobility typedDst = (TMasterToHandMobility) dst;
         }
 
         if(deserialize_key) {
-TMasterToHandMobility typedDst = (TMasterToHandMobility) dst;
+TMasterToSlaveMobility typedDst = (TMasterToSlaveMobility) dst;
 
 
         deserialize_sample(endpoint_data, dst, src, false, true, endpoint_plugin_qos);
@@ -486,7 +486,7 @@ TMasterToHandMobility typedDst = (TMasterToHandMobility) dst;
         }
 
         if (deserialize_key) {
-TMasterToHandMobility typedDst = (TMasterToHandMobility) sample;
+TMasterToSlaveMobility typedDst = (TMasterToSlaveMobility) sample;
 
 
             deserialize_sample(
@@ -545,7 +545,7 @@ TMasterToHandMobility typedDst = (TMasterToHandMobility) sample;
                                            DataWriterListener listener,
                                            int mask) {
         
-        return new TMasterToHandMobilityDataWriter(native_writer, listener, mask, this);                
+        return new TMasterToSlaveMobilityDataWriter(native_writer, listener, mask, this);                
             
     }
 
@@ -553,7 +553,7 @@ TMasterToHandMobility typedDst = (TMasterToHandMobility) sample;
                                            DataReaderListener listener,
                                            int mask) {
         
-        return new TMasterToHandMobilityDataReader(native_reader, listener, mask, this);                
+        return new TMasterToSlaveMobilityDataReader(native_reader, listener, mask, this);                
             
     }
 
@@ -561,18 +561,18 @@ TMasterToHandMobility typedDst = (TMasterToHandMobility) sample;
     // Constructor
     // -----------------------------------------------------------------------
 
-    protected TMasterToHandMobilityTypeSupport() {
+    protected TMasterToSlaveMobilityTypeSupport() {
         
         /* If the user data type supports keys, then the second argument
         to the constructor below should be true.  Otherwise it should
         be false. */        
 
-        super(TYPE_NAME, false,TMasterToHandMobilityTypeCode.VALUE,TMasterToHandMobility.class,TypeSupportType.TST_STRUCT, PLUGIN_VERSION);
+        super(TYPE_NAME, false,TMasterToSlaveMobilityTypeCode.VALUE,TMasterToSlaveMobility.class,TypeSupportType.TST_STRUCT, PLUGIN_VERSION);
     
     }
 
-    protected TMasterToHandMobilityTypeSupport(boolean enableKeySupport) {
+    protected TMasterToSlaveMobilityTypeSupport(boolean enableKeySupport) {
     
-        super(TYPE_NAME, enableKeySupport,TMasterToHandMobilityTypeCode.VALUE,TMasterToHandMobility.class,TypeSupportType.TST_STRUCT, PLUGIN_VERSION);
+        super(TYPE_NAME, enableKeySupport,TMasterToSlaveMobilityTypeCode.VALUE,TMasterToSlaveMobility.class,TypeSupportType.TST_STRUCT, PLUGIN_VERSION);
     }
 }
