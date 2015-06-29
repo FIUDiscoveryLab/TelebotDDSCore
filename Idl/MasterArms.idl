@@ -1,0 +1,20 @@
+// Data Definition for Communication between Master and Slave
+
+module master
+{
+	module arms
+	{
+		// Topics
+		const string TOPIC_MASTER_TO_SLAVE_ARMS = "MasterToSlaveArmsCommands";
+		const string TOPIC_SLAVE_TO_MASTER_ARMS = "SlaveToMasterArmsMessages";
+
+		struct TMasterToArms
+		{
+			long servoId;
+			long servoPositon;
+			long servoSpeed;
+		};
+	};
+};
+
+
