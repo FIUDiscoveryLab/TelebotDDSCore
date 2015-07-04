@@ -10,7 +10,13 @@ Contains DDS generated files, scripts and IDL files
 ## Installation
 
 Add TelebotDDSCore as a submodule to your project
-`git submodule add https://github.com/FIUDiscoveryLab/TelebotDDSCore.git src/`
+
+### Java
+$ `git submodule add https://github.com/FIUDiscoveryLab/TelebotDDSCore.git src/telebotddscore`
+
+### C++
+
+$ `git submodule add https://github.com/FIUDiscoveryLab/TelebotDDSCore.git src/telebotddscore`
 
 ## Updating
 
