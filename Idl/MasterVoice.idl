@@ -1,0 +1,15 @@
+// Data Definition for Communication between Master and Slave via Voice commands
+
+module master
+{
+	module voice
+	{
+		// Topic
+		const string TOPIC_MASTER_TO_SLAVE_VOICE = "MasterToSlaveVoiceCommands";
+		
+		struct TMasterToSlaveVoice
+		{
+			string voiceCommand;
+		};
+	};
+};
